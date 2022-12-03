@@ -70,7 +70,7 @@ const Header = () => {
               /* Add social media links based on the `socials` data */
               socials.map(s =>
                 <a href={s.url} key={s.url} target="_blank">
-                  <Button colorScheme={colorTheme}><FontAwesomeIcon icon={s.icon} ></FontAwesomeIcon></Button>
+                  <FontAwesomeIcon icon={s.icon} size="2x"></FontAwesomeIcon>
                 </a>)
             }
             </HStack>
@@ -78,8 +78,8 @@ const Header = () => {
           <nav>
             <HStack spacing={2}>
               {/* Add links to Projects and Contact me section */}
-              <Button onClick={handleClick('projects')} colorScheme={colorTheme}>Projects</Button>
-              <Button onClick={handleClick('contactme')} colorScheme={colorTheme}>Contact</Button>
+              <a onClick={handleClick('projects')} href="#/projects">Projects</a>
+              <a onClick={handleClick('contactme')} href="#/contact-me">Contact</a>
             </HStack>
           </nav>
         </HStack>
