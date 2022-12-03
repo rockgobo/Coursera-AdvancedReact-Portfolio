@@ -25,7 +25,7 @@ const LandingSection = () => {
     initialValues: {
       firstName: "The name of the user",
       email: "The email of the user",
-      type: 'hireMe' | 'openSource' | 'other',
+      type: 'hireMe',
       comment: "A message from the user"
     },
     onSubmit: (values) => {
