@@ -29,7 +29,6 @@ const LandingSection = () => {
       comment: "A message from the user"
     },
     onSubmit: (values) => {
-      console.log(values);
       submit("/", values)
         .then(console.log(response))
         .then(onOpen(response.type, response.message))
@@ -110,7 +109,7 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button type="submit" colorScheme="purple" width="full" disabled={isLoading}>
                 Submit
               </Button>
             </VStack>
