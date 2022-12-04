@@ -30,9 +30,8 @@ const LandingSection = () => {
     },
     onSubmit: (values) => {
       submit("/", values)
-        .then(console.log(response))
         .then(onOpen(response.type, response.message))
-        .then(((r) => {console.log(response.type);if(r.type==='success') {formik.resetForm()}})(response))
+        .then(((r) => {if(r.type==='success') {formik.resetForm()}})(response))
       },
     validationSchema: Yup.object({
       firstName: Yup.string()
