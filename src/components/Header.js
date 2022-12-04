@@ -52,7 +52,6 @@ const Header = () => {
 
   useEffect(() => {
     function handleScroll() {
-      console.log(headerBox)
       let currentPosition = window.pageYOffset;
       if (currentPosition > scrollTop) {
         headerBox.current.style.transform = 'translateY(-200px)';
